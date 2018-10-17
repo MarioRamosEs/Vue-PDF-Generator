@@ -10,6 +10,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0-rc.1",
     "jspdf": "^1.4.1",
+    "jspdf-autotable": "^2.3.5",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuetify": "^1.2.0"

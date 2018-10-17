@@ -6,6 +6,8 @@
  
 <script lang="js">
    import jsPDF from 'jspdf';
+    // eslint-disable-next-line
+   import autoTable from 'jspdf-autotable';
    
   export default  {
     props: [],
@@ -25,7 +27,6 @@
         generatePDF(){
             console.log("Generando pdf...");
             
-            // eslint-disable-next-line
             let columns = [
                {title: 'Title', dataKey: "title"}, 
                {title: 'Description', dataKey: "description"}
@@ -33,7 +34,7 @@
             
             let doc = new jsPDF();
             doc.text('Hello world!', 10, 10);
-            //doc.autoTable(columns, this.todos);
+            doc.autoTable(columns, this.todos);
             doc.save("export.pdf");
         }
     },
