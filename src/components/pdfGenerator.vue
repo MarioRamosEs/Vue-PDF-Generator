@@ -2,7 +2,7 @@
   <div ref="printMe">
     <v-btn @click="generatePDF()">generatePDF</v-btn>
     <v-btn @click="generatePDF2Canvas()">generatePDF2Canvas</v-btn>
-    
+    <v-btn @click="generateFromHTML()">generatePDF from HTML</v-btn>
     <!-- OUTPUT -->
     <img :src="output">
 
@@ -57,6 +57,14 @@
             let doc = new jsPDF();
             doc.addImage(this.output, 'JPEG', 20, 20);
             doc.save("export.pdf");
+        }, generateFromHTML(){
+            const el = this.$refs.printMe;
+            let doc = new jsPDF();
+            doc.fromHTML(
+                el, // HTML string or DOM elem ref.
+                10, // x coord
+                10);
+                doc.save("export.pdf");
         }
     },
     computed: {
