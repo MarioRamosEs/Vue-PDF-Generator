@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "jspdf-autotable": "^2.3.5",
     "vue": "^2.6.12",
     "vue-html2canvas": "0.0.4",
